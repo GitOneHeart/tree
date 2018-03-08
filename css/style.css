@@ -1,0 +1,554 @@
+.center {
+  left: 0;
+  right: 0;
+  margin: auto;
+  position: absolute;
+}
+.section {
+  width: 640px;
+  height: 100%;
+  position: absolute;
+}
+.howPlay {
+  width: 3.06666667rem;
+  height: 1.13333333rem;
+  background: url(../img/a1.png) no-repeat;
+  background-size: 100% 100%;
+  position: fixed;
+  right: 0 ;
+  top: 0.48rem;
+  color: #ffffff;
+  text-align: center;
+  line-height: 1.13333333rem;
+  font-size: 0.46666667rem;
+  z-index: 99;
+}
+#index {
+  background: url(../img/a2.png) no-repeat;
+  top: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  background-size: 100% 100%;
+}
+#index .game_logo {
+  width: 100%;
+  height: 6.4rem;
+  text-align: center;
+  padding-top: 1.86666667rem;
+  background: url(../img/a4.png) no-repeat center;
+  background-size: 95% 100%;
+  background-position: 20px 2.66666667rem;
+  z-index: 80;
+}
+#index .game_logo img {
+  width: 70%;
+  height: 4rem;
+  z-index: 0;
+}
+#index .game_house {
+  width: 100%;
+  height: 6.53333333rem;
+  background: url(../img/a7.png) no-repeat center;
+  background-size: 100% 100%;
+  background-clip: border-box;
+  margin: 0 auto;
+  box-sizing: border-box;
+  position: fixed;
+  bottom: 2.13333333rem;
+}
+#index .game_house .game_tree {
+  width: 9.21333333rem;
+  height: 7.68rem;
+  position: absolute;
+  left: 1.2rem;
+  bottom: 2.4rem;
+}
+#index .game_house .game_wallet {
+  width: 3.25333333rem;
+  height: 1.46666667rem;
+  z-index: 100;
+  background: url(../img/a6.png) no-repeat center;
+  background-size: 100% 100%;
+  margin: 0 auto;
+  position: absolute;
+  bottom: 2.26666667rem;
+  left: 32%;
+}
+#index .game_house .game_btn {
+  width: 5.34666667rem;
+  height: 1.76rem;
+  margin: 0 auto;
+  margin-top: 20px;
+  position: absolute;
+  bottom: 0.4rem;
+  left: 3.06666667rem;
+}
+#index .game_house .indexText {
+  position: absolute;
+  bottom: -0.33333333rem;
+  left: 10%;
+  font-size: 0.4rem;
+  width: 80%;
+  height: 30px;
+  text-align: center;
+  color: #ff0000;
+}
+.show_bg {
+  width: 640px;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  display: none;
+}
+.show_bg .ruleShow {
+  height: 5.26666667rem;
+  width: 8rem;
+  background: url(../img/B1.png) no-repeat;
+  background-size: 100% 100%;
+  z-index: 999999;
+  position: absolute;
+  left: 17%;
+  top: 0.8rem;
+}
+.show_bg img {
+  width: 3.65333333rem;
+  height: 1.14666667rem;
+  position: absolute;
+  left: 35%;
+  top: 6.66666667rem;
+}
+#container {
+  width: 640px;
+  height: 100%;
+  /*border: 1px solid green;*/
+  overflow: hidden;
+  z-index: 999999;
+  position: fixed;
+  padding: 0.6rem 0.6rem 0.6rem 0.6rem;
+}
+.closeBtn {
+  position: fixed;
+  right: 35px ;
+  top: 40px;
+}
+ul {
+  height: 1.33333333rem;
+  color: #ffffff;
+  border-bottom: 4px solid #8c8c8b;
+}
+li.tab-item {
+  /*transform: translate(0,-100%);*/
+  list-style: none;
+  width: 25%;
+  float: left;
+  height: 100%;
+  line-height: 1.06666667rem;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+  color: #ffffff;
+  font-size: 0.46666667rem;
+  box-sizing: border-box;
+  padding: 0 0 0 0;
+  /*transition: transform 1s;*/
+}
+li.tab-item:first-child {
+  margin: 0 0.26666667rem 0 0.66666667rem;
+}
+li.tab-item.active {
+  height: 89px;
+  background: url(../img/scrollbar.png) no-repeat;
+  color: #ffffff;
+  background-position: -30px 58px;
+}
+.products {
+  height: 100%;
+}
+.products .main {
+  height: 100%;
+  color: white;
+  display: none;
+}
+.products .main.selected {
+  display: block;
+}
+.products .ruleTop {
+  font-size: 0.4rem;
+  width: 2.26666667rem;
+  height: 0.93333333rem;
+  background: #FFFFFF;
+  line-height: 0.93333333rem;
+  font-family: '微软雅黑';
+  text-align: center;
+  margin-top: 0.45333333rem;
+}
+.main p {
+  color: #FFFFFF;
+  font-size: 0.4rem;
+  margin-top: 0.13333333rem;
+  line-height: 40px;
+}
+.main .prizeMain,
+.main .rankingMain {
+  width: 100%;
+  color: #FFFFFF;
+  font-size: 0.4rem;
+  float: left;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: 2px dashed #8C8C8B;
+}
+.main .prizeMain .prizeImg,
+.main .rankingMain .prizeImg {
+  margin-right: 10px;
+  vertical-align: top;
+}
+.main .prizeMain .prizeImg,
+.main .rankingMain .prizeImg,
+.main .prizeMain .rankingImg,
+.main .rankingMain .rankingImg {
+  width: 1.06666667rem;
+  height: 1.06666667rem;
+  border-radius: 50%;
+  float: left;
+}
+.main .prizeMain .prizeLi,
+.main .rankingMain .prizeLi {
+  display: block;
+  float: left;
+  height: 100%;
+  color: #FFFFFF;
+}
+.main .prizeMain .prizeLi .span_c,
+.main .rankingMain .prizeLi .span_c {
+  color: yellow;
+}
+.rankingXu {
+  color: #FFFFFF;
+  text-shadow: 1px 1px 3px #FF0000;
+  float: left;
+  margin-right: 0.4rem;
+  font-size: 0.6rem;
+}
+.rankingImg {
+  margin-right: 0.53333333rem;
+}
+.rankingLi {
+  color: #FFFFFF;
+  width: 6.66666667rem;
+  float: left;
+  line-height: 1.3;
+}
+.span_d,
+.rankingName {
+  color: yellow;
+}
+.rankingName {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: block;
+  width: 1.73333333rem;
+  float: left;
+}
+#GrowUp,
+#friend {
+  width: 640px;
+  height: 100%;
+  position: fixed;
+  background: #333333;
+  background: url(../img/bg.png) no-repeat;
+  top: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  background-size: 100% 100%;
+}
+.GameName {
+  width: 5.33333333rem;
+  height: 2.66666667rem;
+  margin: 0 auto;
+  margin-top: 1.6rem;
+  box-sizing: border-box;
+  text-align: center;
+}
+.GameName .imgCon {
+  width: 2.13333333rem;
+  height: 2.13333333rem;
+  border-radius: 50%;
+  border: 3px solid #FF0000;
+  overflow: hidden;
+  margin: 0 auto;
+  margin-bottom: 0.26666667rem;
+}
+.GameName .imgCon img {
+  width: 100%;
+  height: 100%;
+}
+.GameName .Game_Id {
+  margin: 0 auto;
+  color: red;
+  font-size: 0.4rem;
+  line-height: 0.4rem;
+  text-align: center;
+}
+.GameName .Game_Id .gameId {
+  display: inline-block;
+  color: red;
+  overflow: hidden;
+  width: 1.2rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height: 0.4rem;
+}
+.jug {
+  width: 2.2rem;
+  height: 1.45333333rem;
+  background: #FF0000;
+  background: url(../img/jug1.png) no-repeat;
+  background-position: 0 0px;
+  background-origin: content-box;
+  background-clip: content-box;
+  position: absolute;
+  right: 2.66666667rem;
+  top: -4rem;
+  opacity: 0;
+  -webkit-transition: -webkit-transform 1s;
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+.water {
+  width: 2.66666667rem;
+  height: 1.92rem;
+  position: absolute;
+  display: block;
+  right: 4.66666667rem;
+  display: none;
+  top: -2.33333333rem;
+}
+.GrowUp_house {
+  width: 100%;
+  height: 6.53333333rem;
+  background: url(../img/a7.png) no-repeat center;
+  background-size: 100% 100%;
+  background-clip: border-box;
+  margin: 0 auto;
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 2.13333333rem;
+}
+.GrowUp_house .status1 {
+  width: 9.21333333rem;
+  height: 7.68rem;
+  margin: 0 auto;
+  position: absolute;
+  bottom: 40%;
+  left: 14%;
+}
+.GrowUp_house .status1 img {
+  width: 100%;
+  height: 100%;
+}
+.GrowUp_house .GrowUp_wallet {
+  width: 3.33333333rem;
+  height: 1.46666667rem;
+  background: url(../img/a6.png) no-repeat center;
+  background-size: 100% 100%;
+  margin: 0 auto;
+  position: absolute;
+  bottom: 2.4rem;
+  left: 35%;
+}
+.shareText {
+  position: fixed;
+  right: 25%;
+  top: 14%;
+}
+.shareJian {
+  position: fixed;
+  right: 5%;
+  top: 2%;
+}
+.shareConfirm {
+  position: fixed;
+  right: 36%;
+  top: 40%;
+}
+.GameFlower {
+  width: 85%;
+  height: 3.16rem;
+  background: url(../img/a4.png) no-repeat;
+  background-size: 100% 100%;
+  margin: 0 auto;
+  position: fixed;
+  top: 3.6rem;
+  right: 0;
+}
+.powerLi {
+  width: 0.66666667rem;
+  height: 3.76rem;
+  position: absolute;
+  left: 0.33333333rem;
+}
+.powerLi .powerBar {
+  width: 0.46666667rem;
+  height: 3.76rem;
+  background: url(../img/e1.png) no-repeat;
+  background-size: 100% 100%;
+  margin-left: 22px;
+}
+.powerLi .powerBar .powerProgress {
+  width: 70%;
+  height: 0%;
+  background: url(../img/e2.png) no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  bottom: 0;
+  border-radius: 0 0 30% 0;
+}
+.powerLi .powerMeasure {
+  width: 1.6rem;
+  font-size: 0.32rem;
+  color: #ff0000;
+  text-align: center;
+}
+.powerLi .powerA {
+  width: 1.6rem;
+  font-size: 0.32rem;
+  color: #ff0000;
+  text-align: center;
+}
+.GameKettle {
+  width: 2.2rem;
+  height: 1.45333333rem;
+  margin-top: 10px;
+  position: absolute;
+  right: 0.46666667rem;
+  z-index: 10;
+}
+.GameKettle .kettle1 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+}
+.GameKettle .kettle1 img {
+  width: 100%;
+  height: 100%;
+}
+.GameKettle .kettle2 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+}
+.GameKettle .kettleText {
+  width: 2.2rem;
+  text-align: center;
+  color: #FF0000;
+  position: absolute;
+  top: 1.5rem;
+  right: -0.5rem;
+  font-size: 0.32rem;
+}
+.GameKettle .rockText {
+  color: #8e8e8e;
+}
+.GrowUp_btn,
+.invite_btn,
+.rock_btn,
+.join_btn {
+  width: 5.34666667rem;
+  height: 1.76rem;
+  margin: 0 auto;
+  margin-top: 20px;
+  position: absolute;
+  bottom: 0.4rem;
+  left: 3.06666667rem;
+}
+.GrowUp_btn img,
+.invite_btn img,
+.rock_btn img,
+.join_btn img {
+  width: 100%;
+  height: 100%;
+}
+.GrowUpText {
+  position: absolute;
+  bottom: -0.33333333rem;
+  left: 25%;
+  font-size: 0.4rem;
+  width: 5.5rem;
+  height: 30px;
+  text-align: center;
+  color: #ff0000;
+}
+.friendStatus {
+  width: 9.21333333rem;
+  height: 7.68rem;
+  margin: 0 auto;
+  position: absolute;
+  bottom: 40%;
+  left: 14%;
+}
+.friendStatus img {
+  width: 100%;
+  height: 100%;
+}
+.myStatus {
+  width: 9.21333333rem;
+  height: 7.68rem;
+  margin: 0 auto;
+  position: absolute;
+  bottom: 40%;
+  left: 14%;
+}
+.myStatus img {
+  width: 100%;
+  height: 100%;
+}
+.myWallet {
+  width: 3.73333333rem;
+  height: 1.6rem;
+  z-index: 100;
+  background: url(../img/a6.png) no-repeat center;
+  background-size: 100% 100%;
+  margin: 0 auto;
+  position: absolute;
+  bottom: 2.26666667rem;
+  left: 35%;
+}
+.rockMain {
+  width: 80%;
+  margin: 0 auto;
+  position: fixed;
+  top: 20%;
+  left: 10%;
+  z-index: 999999;
+  background: url(../img/d1.png) no-repeat center;
+  background-size: 100% 100%;
+  text-align: center;
+}
+@-webkit-keyframes rock {
+  0% {
+    -webkit-transform: rotate(40deg);
+  }
+  50% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(40deg);
+  }
+}
+@keyframes rock {
+  0% {
+    transform: rotate(40deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(40deg);
+  }
+}

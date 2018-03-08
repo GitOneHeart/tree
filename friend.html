@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<meta content="telephone=no" name="format-detection" />
+	<meta http-equiv="pragma" content="no-cache">
+	<meta name="viewport" content="width=640,target-densitydpi=320, user-scalable=no">
+	<title>全民来种树</title>
+	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" type="text/css" href="css/base.css"/>
+	<link rel="stylesheet" href="http://10086.sj168.com:8083/activitys/broad_band/css/weui.css">
+	<link rel="stylesheet" href="css/animation.css" />
+	<script type="text/javascript" src="http://file.dangapp.com/activitys/hlbe/barrage/js/jquery-1.9.1.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"/>
+	<script type="text/javascript" src="http://10086.sj168.com:8083/activitys/red/js/util.js"></script>
+	<script src="http://10086.sj168.com:8083/activitys/red/js/jweixin-1.0.0.js"></script>
+	<script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js"></script>	
+	<script src="js/main2.js"></script>
+</head>
+<body>
+		<!--弹窗（温馨提示等）-->
+	<div class="weui_dialog_alert" id="dialog2" style="display: none;">
+		<div class="weui_mask"></div>
+		<div class="weui_guang" style="width: 100%;height: 60%;background: url(img/d1.png) no-repeat center;position: absolute;top: 18%;left: 0;z-index: 999;">
+			<div class="weui_dialog" style="background: url(img/alert.png) no-repeat; border-radius: .125rem;height: 70%;top: 60%;">
+				<div class="closeWeui" style="position: fixed;right: 12%;top: -1%;z-index: 99999;"><img src="img/d5.png"/></div>
+			<div class="weui_dialog_bd" style="width: 6rem;margin: 0 auto;margin-top: 30%;">
+				<span id="prompt_message" style="color: #FFFFFF; font-weight: 400; text-shadow: 0 0 .25rem #f35; font-size: .4rem;">数据显示在这里</span>
+			</div>
+				<div class="weui_dialog_ft" style="	padding: 20px 1.25rem;width: 90%;position: absolute;left: 7%;top:37%;border: none;">
+					<a href="javascript:;" class="weui_btn_dialog primary" style="background: url(img/d3.png) no-repeat;background-size: 100% 100%; color: #000; font-size: .5rem; font-weight: 700; border-radius: .1rem; box-shadow: 0 0 .25rem #f35; height: 1.2rem; line-height: 1.2rem;color: #e62502;">参与活动抽大奖</a>
+				</div>
+				<div class="weui_weui_dialog_text" style="position: absolute;left: 7%;top:55%;">
+					<p style="color: yellow;width: 70%;margin: 0 auto;font-size: 18px;">Vivo X20手机等着您，更还有意想不到的福利呦，100\300\500MB省内流量等您来抽！</p>
+				</div>
+			</div>	
+		</div>
+	</div>
+	<!--异常弹窗-->
+	<div class="weui_dialog_alert" id="error" style="display: none;">
+		<div class="weui_mask"></div>
+		<div class="weui_guang" style="width: 100%;height: 60%;background: url(img/d1.png) no-repeat center;position: absolute;top: 18%;left: 0;z-index: 999;">
+			<div class="weui_dialog" style="background: url(img/alert.png) no-repeat; border-radius: .125rem;height: 70%;top: 60%;">
+				<div class="closeWeui" style="position: fixed;right: 12%;top: -1%;z-index: 99999;"><img src="img/d5.png"/></div>
+			<div class="weui_dialog_bd" style="width: 6rem;margin: 0 auto;margin-top: 30%;">
+				<span id="errorText" style="color: #FFFFFF; font-weight: 400; text-shadow: 0 0 .25rem #f35; font-size: .4rem;">数据显示在这里</span>
+			</div>
+				<div class="weui_dialog_ft" style="	padding: 20px 1.25rem;width: 90%;position: absolute;left: 7%;top:37%;border: none;">
+					<a href="javascript:;" class="confirm primary" style="background: url(img/d3.png) no-repeat;background-size: 100% 100%; color: #000; font-size: .5rem; font-weight: 700; border-radius: .1rem; box-shadow: 0 0 .25rem #f35; height: 1.2rem; line-height: 1.2rem;color: #e62502;margin-bottom: 10%;">确认</a>
+				</div>
+				<div class="weui_weui_dialog_text" style="position: absolute;left: 7%;top:55%;">
+					<p style="color: yellow;width: 70%;margin: 0 auto;font-size: 18px;">Vivo X20手机等您来，快来试试您的好运吧！</p>
+				</div>
+			</div>	
+		</div>
+	</div>
+	
+	
+    <div class="show_bg">
+    	<div class="ruleShow"></div>
+    	<div class="btn_"><img src="img/B2.png"/></div>
+    </div>
+    <!--Tab选项卡-->
+    <!--<div class="weui_mask"></div>-->
+	<div id="container" class="weui_mask" style="display: none;">
+		<div class="closeBtn"><img src="img/closeTab.png"/></div>
+        <ul>
+            <li class="tab-item active">活动规则</li>
+            <li class="tab-item">我的奖品</li>
+            <li class="tab-item">排行榜</li>
+        </ul>
+        <div class="products">
+            <div class="main selected">
+            	<div class="ruleTop">活动奖品</div>
+            	<p class="ruleCon">一等奖：Vivo X20手机一部（限1人,抽奖产生税款由用户承担）<br/>二等奖：500M省内流量（限300人）<br/>三等奖：300M省内流量（1000人）<br/>参与奖：100M省内流量（不限制）<br/></p>
+            	<div class="ruleTop">活动规则</div>
+            	<p class="ruleCon">1、参与活动的用户，进入页面后，获取幸福树种子，参与者每天可以给自己浇水一次，每天每个好友可以帮助用户浇水一次（最多可为1个好友浇水），每天最多种好一颗幸福树并获得一次抽奖机会；<br/>
+            		2、参与用户只能是呼伦贝尔移动号码，并关注绑定【呼伦贝尔移动
+微厅】公众号，才可以进行参与参与种树；帮助好友浇水的用户不需
+要；<br/>3、每微信每号每天可参与一次种树并抽奖，获得奖励不累计，以获
+得最高为准；<br/>4、用户每天都能参与，每天活动时间结束后数据清零；<br/></p>
+            </div>
+            <div class="main">
+            	<div class="prizeMain">
+            		<img class="prizeImg" src="img/shu5.png" alt=""  >
+            		<div class="prizeLi">您于<span class="span_c">2001年</span>获得二等奖: <span class="span_c">300MB省内流量</span></div>
+            	</div>
+            	<div class="prizeMain">
+            		<img class="prizeImg" src="img/shu5.png" alt=""  >
+            		<div class="prizeLi">您于<span class="span_c">2001年</span>获得二等奖: <span class="span_c">300MB省内流量</span></div>
+            	</div>
+            	<div class="prizeMain">
+            		<img class="prizeImg" src="img/shu5.png" alt=""  >
+            		<div class="prizeLi">您于<span class="span_c">2001年</span>获得二等奖: <span class="span_c">300MB省内流量</span></div>
+            	</div>
+            </div>
+            <div class="main">
+            	<div class="rankingMain">
+            		<div class="rankingXu">01</div>
+            		<img class="rankingImg" src="img/shu5.png" alt=""  >
+            		<div class="rankingLi"><span class="rankingName">小A君SADAKSDJALSDJALDJALKSJDAL</span>阿斯捷阿拉斯加阿隆索咬到了二等奖<span class="span_d">500MB省内流量</span></div>
+            	</div>
+            </div>
+        </div>
+    </div>
+    <div id="friend" class="friend">
+    	<div class="howPlay">
+    		玩法介绍&nbsp;》
+    	</div>
+    	<div class="GameName">
+    		<div class="imgCon circle"><img src="img/shu1.png"/></div>
+    		<div class="Game_Id"><span class="gameId">巴啦啦</span>的幸福树</div>
+    	</div>
+    	<div class="GameFlower"></div>
+    	<div class="powerLi">
+    		<div class="powerBar">
+    			<div class="powerProgress">
+    			</div>
+    		</div>
+    		<div class="powerMeasure"><span class="progressNum" style="color: red;">0</span>/500</div>	
+    		<div class="powerA">幸福值</div>
+    	</div>
+    	<div class="GameKettle">
+    		<div class="kettle1  wobble animated infinite"><img src="img/jug1.png"/></div>
+    		<div class="kettle2" style="display: none;"><img src="img/jug2.png"/></div>
+    		<div class="kettleText wobble animated infinite">点我浇水</div>
+    	</div>
+    	<div class="GrowUp_house">
+    	<!--隐藏的水壶-->
+    		<div class="jug"></div>
+    		<div class="water"><img src="img/water1.png"/></div>
+    		<!--<!-状态-->
+    		<div class="friendStatus">
+    			    <a href="javascript:void(0)"><img class="friendTree" src="img/shu1.png"/></a>	
+    		</div>
+    		<div class="GrowUp_wallet"></div>
+    		<div class="GrowUp_btn" style="display: none;">
+				<img src="img/water.png"/>
+			</div>
+			<!--new -->
+			<div class="join_btn animated infinite tada">
+				<img src="img/join.png"/>
+			</div>
+			<!--end-->
+			<div class="rock_btn animated infinite tada" style="display: none;">
+				<img src="img/rock.png"/>
+			</div>
+			<p class="GrowUpText">当前幸福值为<span class="GrowUpEne">0</span>，还需要获得<span class="reduce">500</span>幸福值才可参加抽奖</p>
+    	</div>
+    </div>
+    <div class="rockPrize" style="display: none;">
+    	<div class="weui_mask" style="background: rgba(0,0,0,0.8);"></div>
+    	<div class="rockMain rock"><img class="rockImg rock" src="img/shu1.png"></div>
+    </div>
+    <input id="num" type="hidden" value="0">
+    <script type="text/javascript">
+    	$('.closeWeui').on('click',function(){
+    		$('#dialog2').hide()
+    		$('#error').hide()
+    	})
+    	    /*温馨提示弹窗*/
+    	dialog2Show("恭喜您抽中了300MB省内流量");
+		function dialog2Show(f) {
+			$('#prompt_message').html(f);
+			var $dialog = $('#dialog2');
+			var closeWeui=$('.closeWeui');
+			$dialog.find('.weui_btn_dialog').on('click', function() {
+				$dialog.hide();
+//				closeWeui.on('click',function(){
+//					window.location.href='index.html';
+//				})
+				keyD = 1;
+				window.location.href='index.html';
+			});
+		}
+		    	    /*异常弹窗*/
+    	errorAlert("您的活动次数已不足，请明日再来！");
+		function errorAlert(f) {
+			$('#errorText').html(f);
+			var $dialog = $('#error');
+			$dialog.find('.confirm').on('click', function() {
+				$dialog.hide();
+				keyD = 1;
+			});
+		}
+    </script>
+</body>
+</html>
